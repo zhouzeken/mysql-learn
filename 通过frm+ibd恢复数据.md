@@ -23,7 +23,8 @@
 
 如果已经知道表结构，可以直接创建新表，然后从下面步骤开始恢复
 
-17、执行语句：alter table abc discard tablespace;(清掉abc表空间数据)
-18、把旧表abc.ibd复制到和abc.frm同等目录
-19、运行：alter table abc import tablespace;(绑定空间数据)
-20、完成
+17、行格式修改：ALTER TABLE abc ROW_FORMAT = compact;
+18、执行语句：alter table abc discard tablespace;(清掉abc表空间数据)
+19、把旧表abc.ibd复制到和abc.frm同等目录
+20、运行：alter table abc import tablespace;(绑定空间数据)
+21、完成
